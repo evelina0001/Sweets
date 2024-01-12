@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="355.0" prefWidth="480.0" spacing="20.0" style="-fx-background-color: #F5B8B5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <GridPane prefHeight="348.0" prefWidth="440.0" style="-fx-background-color: #F4C2BF;">
+      <columnConstraints>
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="140" />
+         <RowConstraints minHeight="300" />
+      </rowConstraints>
+       <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="871.0" style="-fx-background-color: #F4C2BF;" text="Welcome to the candyshop" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+           <font>
+               <Font name="Britannic Bold" size="37.0" />
+           </font>
+       </Label>
+      <Button fx:id="viewGifts" mnemonicParsing="false" onAction="#viewGift" prefHeight="52.0" prefWidth="445.0" style="-fx-background-color: white;" text="view gifts" textFill="#e08989" GridPane.rowIndex="1">
+         <font>
+            <Font name="Candara Light" size="35.0" />
+         </font>
+      </Button>
+   </GridPane>
+</VBox>
