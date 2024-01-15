@@ -1,8 +1,5 @@
 package com.example.sweets.models;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Gift {
 
@@ -51,25 +48,6 @@ public class Gift {
         return present;
     }
 
-    public void AddSweet(Sweet sweet) {
-        for (Sweet s : present ) {
-            if (s.getName().equals(sweet.getName())) {
-                if (sweet.getClass().getSimpleName().equals("Candy")) {
-                    Candy c = (Candy)sweet;
-                    Candy candy = (Candy)s;
-                    candy.setWeight(candy.getWeight() + c.getWeight());
-                } else {
-                    Biscuit b = (Biscuit)sweet;
-                    Biscuit biscuit = (Biscuit)s;
-                    biscuit.setAmount(b.getAmount() + biscuit.getAmount());
-                }
-                System.out.println(s);
-               return;
-            }
-        }
-        present.add(sweet);
-        System.out.println(sweet);
-    }
 
     @Override
     public String toString() {
@@ -79,37 +57,6 @@ public class Gift {
                 '}';
     }
 
-    public void read(String filename) {
-        try {
-            File sweet = new File(filename);
-            Scanner scan = new Scanner(sweet);
-            box = Box.valueOf(scan.next());
-            color = Color.valueOf(scan.next());
-            int FileSize = scan.nextInt();
-            present.clear();
-            for (int i = 0; i < FileSize; i++) {
-                String type = scan.next();
-                double sugar = scan.nextDouble();
-                double price = scan.nextDouble();
-                String name = scan.next();
-                if (type.equals("Biscuit")) {
-                    int amount = scan.nextInt();
-                    present.add(new Biscuit(id, name, sugar, price, amount));
-                } else if (type.equals("Candy")) {
-                    double weight = scan.nextDouble();
-                    present.add(new Candy(id, name, sugar, price, weight));
-                } else if (type.equals("Sweet")) {
-                    present.add(new Sweet(name, sugar, price));
-
-                }
-            }
-            scan.close();
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-    }
 
     public ArrayList<Sweet> findBySugar(double min, double max) {
         ArrayList<Sweet> sweets = new ArrayList<>();
