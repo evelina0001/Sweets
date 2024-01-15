@@ -9,7 +9,7 @@ public class DeleteViewController {
     Controller controller = new Controller();
     @FXML
     protected void onCancelClick(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Edit-view.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/sweet-view.fxml");
     }
 
     @FXML

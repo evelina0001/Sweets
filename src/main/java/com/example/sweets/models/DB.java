@@ -169,7 +169,7 @@ public class DB {
     public void deleteCandy(int giftId, int candyId) {
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate(String.format("DELETE FROM gift_has_candy WHERE candy_id = %d and gift_id = %d", candyId, giftId));
+            statement.executeUpdate(String.format("DELETE FROM gift_has_candy WHERE id = %d", candyId));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -179,7 +179,7 @@ public class DB {
     public void deleteBiscuit(int giftId, int biscuitId) {
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate(String.format("DELETE FROM gift_has_biscuit WHERE biscuit_id = %d and gift_id = %d", biscuitId, giftId));
+            statement.executeUpdate(String.format("DELETE FROM gift_has_biscuit WHERE id = %d", biscuitId));
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
