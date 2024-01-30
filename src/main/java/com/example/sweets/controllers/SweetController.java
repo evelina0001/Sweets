@@ -33,11 +33,19 @@ public class SweetController implements Initializable {
     }
     @FXML
     protected void deleteSweet(ActionEvent event) throws IOException {
+        if (tableView.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Choose a sweet to delete");
+            return;
+        }
         DB.sweet = tableView.getSelectionModel().getSelectedItem();
         controller.goTo(event, "src/main/resources/com/example/sweets/Delete-View.fxml");
     }
     @FXML
     protected void editSweet(ActionEvent event) throws IOException {
+        if (tableView.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Choose a sweet to edit");
+            return;
+        }
         DB.sweet = tableView.getSelectionModel().getSelectedItem();
         controller.goTo(event, "src/main/resources/com/example/sweets/Edit-view.fxml");
     }

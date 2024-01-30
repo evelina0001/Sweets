@@ -31,7 +31,6 @@ public class DB {
                 int id = resultSet.getInt(1);
                 String color = resultSet.getString(2);
                 String box = resultSet.getString(3);
-                System.out.printf("%d, %s, %s \n ", id, color, box);
                 Gift gift = new Gift(id, Box.valueOf(box), Color.valueOf(color));
                 gifts.add(gift);
             }
@@ -137,7 +136,6 @@ public class DB {
                 double sugar = resultSet.getDouble(3);
                 double price = resultSet.getDouble(4);
                 boolean isCandy = resultSet.getBoolean(5);
-                System.out.println(id);
                 if(isCandy){
                 sweets.add(new Candy(id, name,sugar, price, 0));
                 }

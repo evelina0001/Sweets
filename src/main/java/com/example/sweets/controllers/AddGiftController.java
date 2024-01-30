@@ -28,6 +28,14 @@ public class AddGiftController implements Initializable {
     }
     @FXML
     protected void addGift(ActionEvent event) throws IOException { //Створюємо подарунок
+        if (boxBox.getValue() == null ) {
+            controller.showMessage("Choose box");
+            return;
+        }
+        if (colorBox.getValue() == null) {
+            controller.showMessage("Choose color");
+            return;
+        }
         Gift gift = new Gift(boxBox.getValue(), colorBox.getValue());
         DB db = new DB();
         db.addGift(gift);

@@ -10,7 +10,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class GiftController implements Initializable {
@@ -31,11 +30,19 @@ public class GiftController implements Initializable {
     }
     @FXML
     protected void deleteGift(ActionEvent event) throws IOException {
+        if(Table.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Select gift to delete");
+            return;
+        }
         DB.gift = Table.getSelectionModel().getSelectedItem();
         controller.goTo(event, "src/main/resources/com/example/sweets/deleteGift.fxml");
     }
     @FXML
     protected void editGift(ActionEvent event) throws IOException {
+        if (Table.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Select gift to edit");
+            return;
+        }
         DB.gift = Table.getSelectionModel().getSelectedItem();
         controller.goTo(event, "src/main/resources/com/example/sweets/editGift.fxml");
     }
@@ -45,10 +52,6 @@ public class GiftController implements Initializable {
         controller.setGiftCells(idColumn, colorColumn, boxColumn);
         DB db = new DB();
         ObservableList<Gift>gifts = FXCollections.observableArrayList(db.getAllGifts());
-        ArrayList<Gift>allGifts= db.getAllGifts();
-        for (Gift g:allGifts) {
-            System.out.println(g.getId());
-        }
         Table.setItems(gifts);
     }
 }
