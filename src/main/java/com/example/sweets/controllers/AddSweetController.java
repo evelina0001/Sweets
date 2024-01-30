@@ -6,14 +6,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddViewController implements Initializable {
+public class AddSweetController implements Initializable {
     @FXML
     TableView<Sweet> tableView;
     @FXML
@@ -76,7 +75,6 @@ public class AddViewController implements Initializable {
             Candy candy = (Candy)s;
             candy.setWeight(w);
             db.addCandy(DB.gift.getId(), candy);
-            System.out.println(candy);
         }
         else {
 
@@ -84,7 +82,6 @@ public class AddViewController implements Initializable {
             Biscuit biscuit = (Biscuit)s;
             biscuit.setAmount(a);
             db.addBiscuit(DB.gift.getId(), biscuit);
-            System.out.println(biscuit);
         }
         input.clear();
     }
