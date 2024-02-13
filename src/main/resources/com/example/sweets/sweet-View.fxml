@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.SweetController">
     <children>
-        <GridPane layoutY="-1.0" prefHeight="378.0" prefWidth="600.0">
+        <GridPane layoutY="-1.0" prefHeight="378.0" prefWidth="600.0" style="-fx-background-color: pink;">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="150.33333333333334" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="170.66666666666666" />
@@ -19,7 +21,7 @@
             <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <TableView fx:id="tableView" prefHeight="240.0" prefWidth="471.0" style="-fx-background-color: white;" GridPane.columnSpan="4" GridPane.rowIndex="1">
+                <TableView fx:id="tableView" blendMode="OVERLAY" prefHeight="240.0" prefWidth="471.0" style="-fx-background-color: #ffdcdc;" GridPane.columnSpan="4" GridPane.rowIndex="1">
                     <columns>
                         <TableColumn fx:id="idColumn" prefWidth="100" text="Id" />
                         <TableColumn fx:id="nameColumn" prefWidth="100" text="Name" />
@@ -27,26 +29,32 @@
                         <TableColumn fx:id="priceColumn" prefWidth="100" text="Price" />
                         <TableColumn fx:id="amountColumn" prefWidth="100" text="Amount" />
                     </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Glow />
+               </effect>
                 </TableView>
-                <Button mnemonicParsing="false" onAction="#addSweet" prefHeight="61.0" prefWidth="302.0" style="-fx-background-color: white;" text="Add" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#addSweet" prefHeight="61.0" prefWidth="302.0" style="-fx-background-color: white;" text="Add" textFill="#ff9494" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font></Button>
-                <Button mnemonicParsing="false" onAction="#deleteSweet" prefHeight="72.0" prefWidth="348.0" style="-fx-background-color: white;" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#deleteSweet" prefHeight="72.0" prefWidth="348.0" style="-fx-background-color: white;" text="Delete" textFill="#ff9494" GridPane.columnIndex="2" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font></Button>
-                <Button mnemonicParsing="false" onAction="#editSweet" prefHeight="83.0" prefWidth="359.0" style="-fx-background-color: white;" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#editSweet" prefHeight="83.0" prefWidth="359.0" style="-fx-background-color: white;" text="Edit" textFill="#ff9494" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font></Button>
-                <Button mnemonicParsing="false" onAction="#goBack" prefHeight="83.0" prefWidth="359.0" style="-fx-background-color: white;" text="Go Back" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#goBack" prefHeight="83.0" prefWidth="359.0" style="-fx-background-color: white;" text="Go Back" textFill="#ff9494" GridPane.columnIndex="3" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font></Button>
-            <Label alignment="CENTER" prefHeight="35.0" prefWidth="782.0" text="List of sweets" GridPane.columnSpan="4">
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="782.0" text="List of sweets" textFill="#ff9494" GridPane.columnSpan="4">
                <font>
-                  <Font name="System Italic" size="24.0" />
+                  <Font name="Britannic Bold" size="41.0" />
                </font></Label>
             </children>
         </GridPane>

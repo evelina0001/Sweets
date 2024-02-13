@@ -38,6 +38,16 @@ public class GiftController implements Initializable {
         controller.goTo(event, "src/main/resources/com/example/sweets/deleteGift.fxml");
     }
     @FXML
+    protected void findBySugar(ActionEvent event) throws IOException {
+        if (Table.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Select gift to edit");
+            return;
+        }
+        DB.gift = Table.getSelectionModel().getSelectedItem();
+        controller.goTo(event, "src/main/resources/com/example/sweets/FindBysugar.fxml");
+    }
+
+    @FXML
     protected void editGift(ActionEvent event) throws IOException {
         if (Table.getSelectionModel().getSelectedItem() == null) {
             controller.showMessage("Select gift to edit");
