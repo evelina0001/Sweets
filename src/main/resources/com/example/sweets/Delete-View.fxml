@@ -3,11 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5B8B5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.DeleteViewController">
    <children>
-      <GridPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5B8B5;">
+      <GridPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFEDEC;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -20,10 +21,26 @@
         </rowConstraints>
          <children>
             <ListView prefHeight="250.0" prefWidth="512.0" style="-fx-background-color: #FFD6D4;" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Button fx:id="cncl" mnemonicParsing="false" onAction="#onCancelClick" prefHeight="63.0" prefWidth="216.0" style="-fx-background-color: white;" text="Cancel" textFill="#e08d8d" GridPane.rowIndex="2">
+            <Button fx:id="cncl" mnemonicParsing="false" onAction="#onCancelClick" prefHeight="63.0" prefWidth="216.0" style="-fx-background-color: white;" text="Cancel" GridPane.rowIndex="2">
                <font>
                   <Font name="Candara Light" size="35.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Button>
             <Button fx:id="delete" mnemonicParsing="false" onAction="#onDeleteClick" prefHeight="31.0" prefWidth="242.0" style="-fx-background-color: white;" text="Delete" textFill="#e08d8d" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>

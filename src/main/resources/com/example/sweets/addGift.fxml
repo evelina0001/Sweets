@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.AddGiftController">
    <children>
-      <GridPane layoutX="-3.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5B8B5;">
+      <GridPane layoutX="-3.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f8fdbe;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -17,19 +18,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="59.0" prefWidth="326.0" text="Color" textFill="WHITE">
+            <Label prefHeight="59.0" prefWidth="326.0" style="-fx-background-color: #eeffc5;" text="Color" textFill="#df8fed">
                <font>
                   <Font name="Britannic Bold" size="30.0" />
                </font></Label>
-            <Label prefHeight="69.0" prefWidth="319.0" text="Box" textFill="WHITE" GridPane.rowIndex="1">
+            <Label prefHeight="69.0" prefWidth="319.0" style="-fx-background-color: #eeffc5;" text="Box" textFill="#df8fed" GridPane.rowIndex="1">
                <font>
                   <Font name="Britannic Bold" size="30.0" />
                </font></Label>
-            <ComboBox fx:id="boxBox" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ComboBox fx:id="colorBox" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" />
+            <ComboBox fx:id="boxBox" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <ComboBox fx:id="colorBox" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <opaqueInsets>
+                  <Insets left="20.0" />
+               </opaqueInsets></ComboBox>
             <Button mnemonicParsing="false" onAction="#addGift" prefHeight="58.0" prefWidth="360.0" style="-fx-background-color: white;" text="Add" textFill="#e08d8d" GridPane.rowIndex="2">
                <font>
-                  <Font name="System Italic" size="25.0" />
+                  <Font name="Britannic Bold" size="25.0" />
                </font></Button>
             <Button mnemonicParsing="false" onAction="#onGoBackClick" prefHeight="55.0" prefWidth="359.0" style="-fx-background-color: white;" text="Cancel" textFill="#e08d8d" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
