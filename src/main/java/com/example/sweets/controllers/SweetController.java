@@ -29,7 +29,7 @@ public class SweetController implements Initializable {
 
     @FXML
     protected void addSweet(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Add-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/add-sweet-view.fxml");
     }
     @FXML
     protected void deleteSweet(ActionEvent event) throws IOException {
@@ -38,7 +38,7 @@ public class SweetController implements Initializable {
             return;
         }
         DB.sweet = tableView.getSelectionModel().getSelectedItem();
-        controller.goTo(event, "src/main/resources/com/example/sweets/Delete-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/delete-sweet-view.fxml");
     }
     @FXML
     protected void editSweet(ActionEvent event) throws IOException {
@@ -47,11 +47,11 @@ public class SweetController implements Initializable {
             return;
         }
         DB.sweet = tableView.getSelectionModel().getSelectedItem();
-        controller.goTo(event, "src/main/resources/com/example/sweets/Edit-view.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/edit-sweet-view.fxml");
     }
     @FXML
     public void goBack(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/editGift.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/edit-gift-view.fxml");
     }
 
     @Override

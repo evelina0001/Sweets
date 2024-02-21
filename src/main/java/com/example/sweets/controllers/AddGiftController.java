@@ -17,7 +17,7 @@ public class AddGiftController implements Initializable {
     private ComboBox<Box> boxBox;
     @FXML
     protected void onGoBackClick(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
     }
 
     @Override
@@ -39,7 +39,7 @@ public class AddGiftController implements Initializable {
         Gift gift = new Gift(boxBox.getValue(), colorBox.getValue());
         DB db = new DB();
         db.addGift(gift);
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
 
     }
 }

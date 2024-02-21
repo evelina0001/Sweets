@@ -111,6 +111,10 @@ public class Gift {
         }
     }
 
+    public void setPresent(ArrayList<Sweet> present) {
+        this.present = present;
+    }
+
     public ArrayList<Sweet> findBySugar(double min, double max) {
         ArrayList<Sweet> sweets = new ArrayList<>();
         for (Sweet sw : present) {

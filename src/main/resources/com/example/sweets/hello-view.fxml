@@ -10,7 +10,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <GridPane prefHeight="348.0" prefWidth="440.0" style="-fx-background-color: #F4C2BF;">
+   <GridPane prefHeight="348.0" prefWidth="440.0" style="-fx-background-color: #f9cccc;">
       <columnConstraints>
          <ColumnConstraints />
       </columnConstraints>
@@ -18,15 +18,29 @@
          <RowConstraints minHeight="140" />
          <RowConstraints minHeight="300" />
       </rowConstraints>
-       <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="871.0" style="-fx-background-color: #F4C2BF;" text="Welcome to the candyshop" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+       <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="373.0" style="-fx-background-color: white;" text="Welcome to the candyshop" textAlignment="CENTER" textFill="#ffabbc" textOverrun="CLIP" GridPane.halignment="CENTER">
            <font>
                <Font name="Britannic Bold" size="37.0" />
            </font>
        </Label>
-      <Button fx:id="viewGifts" mnemonicParsing="false" onAction="#viewGift" prefHeight="52.0" prefWidth="445.0" style="-fx-background-color: #F4C2BF;" text="view gifts" textFill="WHITE" GridPane.rowIndex="1">
+      <Button fx:id="viewGifts" alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#viewGift" prefHeight="60.0" prefWidth="449.0" style="-fx-background-color: #f6a5a5;" text="view gifts" textFill="#a1334b" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <font>
             <Font name="Britannic Bold" size="35.0" />
          </font>
       </Button>
+      <ImageView fitHeight="61.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Barrete.png" />
+         </image></ImageView>
+      <ImageView fitHeight="62.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+         <image>
+            <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Barrete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="250.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <image>
+            <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Cake4.png" />
+         </image>
+      </ImageView>
    </GridPane>
 </VBox>

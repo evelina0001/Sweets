@@ -18,7 +18,7 @@ public class EditGiftController implements Initializable {
 
     @FXML
     protected void onGoBackClick(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
     }
 
     @Override
@@ -38,13 +38,13 @@ public class EditGiftController implements Initializable {
         DB.gift.setColor(colorBox.getValue());
         DB db = new DB();
         db.updateGift(DB.gift);
-        controller.goTo(event,"src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event,"src/main/resources/com/example/sweets/gift-view.fxml");
 
     }
     @FXML
     protected void editSweets(ActionEvent event) throws IOException {
 
-        controller.goTo(event, "src/main/resources/com/example/sweets/sweet-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/sweet-view.fxml");
 }
 }
 

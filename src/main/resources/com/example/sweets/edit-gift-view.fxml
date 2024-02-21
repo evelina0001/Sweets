@@ -19,25 +19,25 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label prefHeight="59.0" prefWidth="326.0" text="Color" textFill="#d27575">
+                <Label prefHeight="59.0" prefWidth="139.0" text="Color  :" textFill="#d27575" GridPane.halignment="CENTER">
                <font>
                   <Font name="Britannic Bold" size="30.0" />
                </font></Label>
-                <Label prefHeight="69.0" prefWidth="319.0" text="Box" textFill="#d27575" GridPane.rowIndex="1">
+                <Label prefHeight="69.0" prefWidth="139.0" text="Box  :" textFill="#d27575" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
                   <Font name="Britannic Bold" size="25.0" />
                </font></Label>
                 <ComboBox fx:id="boxBox" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <ComboBox fx:id="colorBox" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" />
-                <Button mnemonicParsing="false" onAction="#editGift" style="-fx-background-color: white;" text="Edit" textFill="#e08d8d" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#editGift" prefHeight="52.0" prefWidth="164.0" style="-fx-background-color: white;" text="Edit" textFill="#e08d8d" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Button>
-                <Button mnemonicParsing="false" onAction="#onGoBackClick" style="-fx-background-color: white;" text="Cancel" textFill="#e08d8d" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#onGoBackClick" prefHeight="52.0" prefWidth="169.0" style="-fx-background-color: white;" text="Cancel" textFill="#e08d8d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Button>
-                <Button mnemonicParsing="false" onAction="#editSweets" style="-fx-background-color: white;" text="Edit sweets" textFill="#e08d8d" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <Button mnemonicParsing="false" onAction="#editSweets" style="-fx-background-color: white;" text="Edit sweets" textFill="#e08d8d" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Button>

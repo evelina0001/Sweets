@@ -19,11 +19,11 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="150.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="359.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="325.3333333333333" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="53.333333333333314" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TableView fx:id="Table" blendMode="COLOR_BURN" prefHeight="395.0" prefWidth="194.0" style="-fx-background-color: #ffe5e5;" GridPane.columnIndex="0" GridPane.columnSpan="3">
+            <TableView fx:id="Table" blendMode="SRC_ATOP" prefHeight="395.0" prefWidth="194.0" style="-fx-background-color: #ffe5e5;" GridPane.columnIndex="0" GridPane.columnSpan="3">
               <columns>
                 <TableColumn fx:id="idColumn" prefWidth="100" text="Id" />
                 <TableColumn fx:id="colorColumn" prefWidth="100" text="Color" />
@@ -35,47 +35,50 @@
                <effect>
                   <InnerShadow>
                      <color>
-                        <Color red="1.0" green="0.8901960849761963" blue="0.8901960849761963" />
+                        <Color red="0.7894737124443054" green="0.623781681060791" blue="0.623781681060791" />
                      </color>
                   </InnerShadow>
                </effect>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
             </TableView>
-            <Button mnemonicParsing="false" onAction="#addGift" prefHeight="61.0" prefWidth="302.0" style="-fx-background-color: white;" text="Add" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#addGift" prefHeight="53.0" prefWidth="138.0" style="-fx-background-color: white;" text="Add" textFill="#d25a73" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Baskerville Old Face" size="23.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#deleteGift" prefHeight="72.0" prefWidth="348.0" style="-fx-background-color: white;" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#deleteGift" prefHeight="53.0" prefWidth="137.0" style="-fx-background-color: white;" text="Delete" textFill="#d25a73" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Baskerville Old Face" size="23.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#editGift" prefHeight="83.0" prefWidth="359.0" style="-fx-background-color: white;" text="Edit" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#editGift" prefHeight="53.0" prefWidth="131.0" style="-fx-background-color: white;" text="Edit" textFill="#d25a73" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Baskerville Old Face" size="23.0" />
                </font></Button>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3"><Button mnemonicParsing="false" onAction="#findBySugar" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: white;" text="Find by sugar" textFill="#ff8f8f" GridPane.columnIndex="3" GridPane.rowIndex="0">
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3"><Button mnemonicParsing="false" onAction="#findBySugar" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: white;" text="Find by sugar" textFill="#e26a6a" GridPane.columnIndex="3" GridPane.rowIndex="0">
                     <font>
-                        <Font size="20.0" />
+                        <Font name="Baskerville Old Face" size="20.0" />
                     </font>
                   <VBox.margin>
                      <Insets bottom="10.0" top="10.0" />
                   </VBox.margin></Button>
-                <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="295.0" style="-fx-background-color: white;" text="Find by name" textFill="#ff8f8f" GridPane.columnIndex="3">
+                <Button mnemonicParsing="false" onAction="#onFindClick" prefHeight="21.0" prefWidth="151.0" style="-fx-background-color: white;" text="Find by name" textFill="#e26a6a" GridPane.columnIndex="3">
                   <font>
                      <Font name="Baskerville Old Face" size="20.0" />
                   </font>
                   <VBox.margin>
                      <Insets bottom="10.0" top="10.0" />
                   </VBox.margin></Button>
-                <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="295.0" style="-fx-background-color: white;" text="Serialize" textFill="#ff8f8f" GridPane.columnIndex="3">
+                <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="151.0" style="-fx-background-color: white;" text="Serialize" textFill="#e26a6a" GridPane.columnIndex="3">
                   <font>
-                     <Font size="20.0" />
+                     <Font name="Baskerville Old Face" size="20.0" />
                   </font>
                   <VBox.margin>
                      <Insets bottom="10.0" top="10.0" />
                   </VBox.margin></Button>
-               <ImageView fitHeight="191.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="145.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Gift2.png" />
+                     <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\GiftPink.png" />
                   </image></ImageView>
             </VBox>
          </children>

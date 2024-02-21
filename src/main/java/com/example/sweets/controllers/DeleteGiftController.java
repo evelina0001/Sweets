@@ -9,13 +9,13 @@ public class DeleteGiftController {
 
     @FXML
     protected void onGoBackClick(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
     }
     @FXML
     protected void onDeleteClick(ActionEvent event) throws IOException {
         DB db = new DB();
         db.deleteGift(DB.gift);
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
     }
 
 
