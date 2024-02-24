@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import java.io.IOException;
@@ -25,7 +26,12 @@ public class GiftController implements Initializable {
     Controller controller = new Controller();
     @FXML
     protected void onFindClick(ActionEvent event) throws  IOException {
+        if (Table.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Select gift to find by name");
+            return;
+        }
         DB.gift = Table.getSelectionModel().getSelectedItem();
+
         controller.goTo(event,"src/main/resources/com/example/sweets/find-by-name-view.fxml" );
     }
 
@@ -36,7 +42,7 @@ public class GiftController implements Initializable {
     @FXML
     protected void deleteGift(ActionEvent event) throws IOException {
         if(Table.getSelectionModel().getSelectedItem() == null) {
-            controller.showMessage("Select gift to delete");
+            controller.showMessage("Select a gift");
             return;
         }
         DB.gift = Table.getSelectionModel().getSelectedItem();
@@ -45,7 +51,7 @@ public class GiftController implements Initializable {
     @FXML
     protected void findBySugar(ActionEvent event) throws IOException {
         if (Table.getSelectionModel().getSelectedItem() == null) {
-            controller.showMessage("Select gift to edit");
+            controller.showMessage("Select a gift");
             return;
         }
         DB.gift = Table.getSelectionModel().getSelectedItem();
