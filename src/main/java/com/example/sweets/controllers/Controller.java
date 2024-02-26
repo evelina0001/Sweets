@@ -3,7 +3,12 @@ import com.example.sweets.models.Biscuit;
 import com.example.sweets.models.Candy;
 import com.example.sweets.models.Gift;
 import com.example.sweets.models.Sweet;
+import javafx.beans.Observable;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.ReadOnlyDoubleWrapper;
 import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,6 +18,7 @@ import java.util.regex.Pattern;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.stage.Stage;
 import java.io.File;
@@ -58,11 +64,13 @@ public class Controller {
             //Встановлюємо рядки для подарунку
             (TableColumn<Gift, String> id,
              TableColumn<Gift, String> color,
-             TableColumn<Gift, String> box) {
+             TableColumn<Gift, String> box,
+             TableColumn<Gift, String> price) {
         id.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(String.format(" %d ", cellData.getValue().getId())));
         color.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getColor().name()));
-        box.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getBox().name()));
-    }
+                box.setCellValueFactory(cellData -> new ReadOnlyStringWrapper(cellData.getValue().getBox().name()));
+                price.setCellValueFactory(cellData ->  new ReadOnlyStringWrapper(String.format("%.2f grn", cellData.getValue().countGiftPrice())));
+                }
 
 
     public boolean isNumeric(String strNum) {

@@ -23,7 +23,10 @@ public class GiftController implements Initializable {
     @FXML
     private TableColumn<Gift, String> boxColumn;
     @FXML
+    private TableColumn<Gift, String> giftPriceColumn;
+    @FXML
     Controller controller = new Controller();
+
     @FXML
     protected void onFindClick(ActionEvent event) throws  IOException {
         if (Table.getSelectionModel().getSelectedItem() == null) {
@@ -70,7 +73,7 @@ public class GiftController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        controller.setGiftCells(idColumn, colorColumn, boxColumn);
+        controller.setGiftCells(idColumn, colorColumn, boxColumn, giftPriceColumn);
         DB db = new DB();
         ObservableList<Gift>gifts = FXCollections.observableArrayList(db.getAllGifts());
         Table.setItems(gifts);
