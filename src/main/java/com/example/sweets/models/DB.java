@@ -32,7 +32,9 @@ public class DB {
                 String color = resultSet.getString(2);
                 String box = resultSet.getString(3);
                 Gift gift = new Gift(id, Box.valueOf(box), Color.valueOf(color));
+                gift.setPresent(getSweets(gift.getId()));
                 gifts.add(gift);
+
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

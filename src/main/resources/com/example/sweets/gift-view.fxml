@@ -28,6 +28,7 @@
                 <TableColumn fx:id="idColumn" prefWidth="100" text="Id" />
                 <TableColumn fx:id="colorColumn" prefWidth="100" text="Color" />
                   <TableColumn fx:id="boxColumn" prefWidth="100" text="Box" />
+                  <TableColumn fx:id="giftPriceColumn" prefWidth="100" text="Price" />
               </columns>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
