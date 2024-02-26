@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.DeleteViewController">
+   <children>
+      <ImageView fitHeight="341.0" fitWidth="603.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\SecondCloseTab.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="39.0" layoutY="98.0" prefHeight="239.0" prefWidth="524.0" style="-fx-background-color: FFEDEC;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="310.3333333333333" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.3333333333333" minWidth="10.0" prefWidth="290.3333333333333" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="60.000003814697266" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="107.6666514078776" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="118.33334859212238" minHeight="10.0" prefHeight="118.33334859212238" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ListView prefHeight="295.0" prefWidth="527.0" style="-fx-background-color: #FFD6D4;" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+             <Label prefHeight="106.0" prefWidth="514.0" text="Are you sure that you want to delete this sweet" textFill="#ff8585" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                 <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                 </font>
+                 <effect>
+                     <Blend />
+                 </effect>
+             </Label>
+            <Button fx:id="cncl" mnemonicParsing="false" onAction="#onCancelClick" prefHeight="65.0" prefWidth="261.0" style="-fx-background-color: white;" text="Cancel" textFill="#ee6f6f" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#onDeleteClick" prefHeight="65.0" prefWidth="251.0" style="-fx-background-color: white;" text="Delete" textFill="#ee6f6f" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

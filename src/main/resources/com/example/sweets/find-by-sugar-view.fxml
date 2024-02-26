@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.FindBySugarController">
+   <children>
+      <GridPane prefHeight="401.0" prefWidth="602.0" style="-fx-background-color: FFEDEC;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="136.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="151.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="152.0" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="118.00000762939453" minHeight="1.000004768371582" prefHeight="71.33333333333334" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="297.33333333333337" minHeight="10.0" prefHeight="247.99999999999997" vgrow="SOMETIMES" />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="31.0" prefWidth="189.0" text="min sugar :" textFill="#e08d8d">
+               <font>
+                  <Font name="Bodoni MT" size="25.0" />
+               </font></Label>
+            <Label alignment="TOP_CENTER" prefHeight="24.0" prefWidth="164.0" text="max sugar  :" textAlignment="JUSTIFY" textFill="#e08d8d" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Bodoni MT" size="25.0" />
+               </font></Label>
+            <TextField fx:id="minText" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="143.0" style="-fx-background-color: white;" GridPane.columnIndex="1" />
+             <TextField fx:id="maxText" prefHeight="43.0" prefWidth="85.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+         <Button onAction="#onFindClick" prefHeight="47.0" prefWidth="230.0" style="-fx-background-color: white;" text="Find" textFill="#e08d8d" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Bodoni MT Black" size="25.0" />
+               </font></Button>
+            <TableView fx:id="tableView" prefHeight="278.0" prefWidth="570.0" style="-fx-background-color: #feecf0;" GridPane.columnSpan="5" GridPane.rowIndex="1">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="100" text="Id" />
+                    <TableColumn fx:id="nameColumn" prefWidth="100" text="Name" />
+                    <TableColumn fx:id="sugarColumn" prefWidth="100" text="Sugar" />
+                    <TableColumn fx:id="priceColumn" prefWidth="100" text="Price" />
+                    <TableColumn fx:id="amountColumn" prefWidth="100" text="Amount" />
+                </columns>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#goBackClick" prefHeight="35.0" prefWidth="205.0" style="-fx-background-color: white;" text="Go back" textFill="#e08d8d" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Bodoni MT Black" size="25.0" />
+               </font></Button>
+            <ImageView fitHeight="44.0" fitWidth="60.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <image>
+                  <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Barrete.png" />
+               </image></ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

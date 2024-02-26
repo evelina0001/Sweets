@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFEDEC;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.EditSweetController">
+   <children>
+      <GridPane layoutY="-8.0" prefHeight="420.0" prefWidth="600.0" style="-fx-background-color: FFEDEC;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="284.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="314.0" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="131.00001525878906" minHeight="10.0" prefHeight="82.66666666666666" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="246.9999942779541" minHeight="10.0" prefHeight="154.66666666666666" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="246.9999942779541" minHeight="10.0" prefHeight="66.66666666666669" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="73.0" prefWidth="600.0" style="-fx-background-color: #ffbaca;" text="Edit sweet" textFill="#d15a74" GridPane.columnSpan="3">
+               <font>
+                  <Font name="Britannic Bold" size="57.0" />
+               </font></Label>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#onCancelClick" prefHeight="41.0" prefWidth="213.0" style="-fx-background-color: white;" text="Cancel" textFill="#e08d8d" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Britannic Bold" size="35.0" />
+               </font></Button>
+             <TextField fx:id="input" prefHeight="66.0" prefWidth="224.0" style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                 <font>
+                     <Font name="Britannic Bold" size="25.0" />
+                 </font></TextField>
+            <Button mnemonicParsing="false" onAction="#onEditClick" prefHeight="69.0" prefWidth="203.0" style="-fx-background-color: white;" text="Edit" textFill="#e08d8d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font></Button>
+            <Label prefHeight="87.0" prefWidth="302.0" text="Enter a new weight" textFill="#d25a73" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Britannic Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="79.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\IceCream.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="ErrLabel" prefHeight="58.0" prefWidth="453.0" textFill="#ff5e5e" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Britannic Bold" size="25.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

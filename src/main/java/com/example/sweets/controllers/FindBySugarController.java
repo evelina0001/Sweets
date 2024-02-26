@@ -37,7 +37,7 @@ public class FindBySugarController implements Initializable {
     Controller controller = new Controller();
     @FXML
     public void goBackClick(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
     }
     @FXML
     public void onFindClick(ActionEvent event) {

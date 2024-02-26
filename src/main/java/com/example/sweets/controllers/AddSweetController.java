@@ -29,7 +29,7 @@ public class AddSweetController implements Initializable {
     private TextField input;
     @FXML
     protected void onCancelClick(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/sweet-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/sweet-view.fxml");
     }
 
     @Override

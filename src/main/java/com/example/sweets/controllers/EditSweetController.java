@@ -30,7 +30,7 @@ public class EditSweetController implements Initializable {
               return;
           }
         } else {
-            ErrLabel.setText(" Input should be a number ");
+            ErrLabel.setText(" !Input should be a number! ");
             return;
         }
 

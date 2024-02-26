@@ -7,7 +7,7 @@ public class HelloController {
     Controller controller = new Controller();
     @FXML
     protected void viewGift(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/Gift-View.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/gift-view.fxml");
     }
     @FXML
     protected void Cancel(ActionEvent event) throws  IOException {

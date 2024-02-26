@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sweets.controllers.SweetController">
+    <children>
+        <GridPane layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffc5c5;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="tableView" blendMode="SRC_ATOP" prefHeight="236.0" prefWidth="601.0" style="-fx-background-color: #ffdcdc;" GridPane.columnSpan="4" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="100" text="Id" />
+                        <TableColumn fx:id="nameColumn" prefWidth="100" text="Name" />
+                        <TableColumn fx:id="sugarColumn" prefWidth="100" text="Sugar" />
+                        <TableColumn fx:id="priceColumn" prefWidth="100" text="Price" />
+                        <TableColumn fx:id="amountColumn" prefWidth="100" text="Amount" />
+                    </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Glow />
+               </effect>
+                </TableView>
+                <Button mnemonicParsing="false" onAction="#addSweet" prefHeight="43.0" prefWidth="130.0" style="-fx-background-color: white;" text="Add" textFill="#f88181" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Button>
+                <Button mnemonicParsing="false" onAction="#deleteSweet" prefHeight="43.0" prefWidth="130.0" style="-fx-background-color: white;" text="Delete" textFill="#f88181" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Button>
+                <Button mnemonicParsing="false" onAction="#editSweet" prefHeight="43.0" prefWidth="130.0" style="-fx-background-color: white;" text="Edit" textFill="#f88181" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Button>
+                <Button mnemonicParsing="false" onAction="#goBack" prefHeight="43.0" prefWidth="130.0" style="-fx-background-color: white;" text="Go Back" textFill="#f88181" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Button>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="782.0" style="-fx-background-color: #ffdcdc;" text="List of sweets" textFill="#fd9b9b" GridPane.columnSpan="4">
+               <font>
+                  <Font name="Britannic Bold" size="41.0" />
+               </font></Label>
+            <ImageView fitHeight="78.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+               <image>
+                  <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Cake3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+               <image>
+                  <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Cake.png" />
+               </image>
+            </ImageView>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

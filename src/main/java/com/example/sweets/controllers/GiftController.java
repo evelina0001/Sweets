@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import java.io.IOException;
@@ -23,28 +24,38 @@ public class GiftController implements Initializable {
     private TableColumn<Gift, String> boxColumn;
     @FXML
     Controller controller = new Controller();
+    @FXML
+    protected void onFindClick(ActionEvent event) throws  IOException {
+        if (Table.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Select gift to find by name");
+            return;
+        }
+        DB.gift = Table.getSelectionModel().getSelectedItem();
+
+        controller.goTo(event,"src/main/resources/com/example/sweets/find-by-name-view.fxml" );
+    }
 
     @FXML
     protected void addGift(ActionEvent event) throws IOException {
-        controller.goTo(event, "src/main/resources/com/example/sweets/addGift.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/add-gift-view.fxml");
     }
     @FXML
     protected void deleteGift(ActionEvent event) throws IOException {
         if(Table.getSelectionModel().getSelectedItem() == null) {
-            controller.showMessage("Select gift to delete");
+            controller.showMessage("Select a gift");
             return;
         }
         DB.gift = Table.getSelectionModel().getSelectedItem();
-        controller.goTo(event, "src/main/resources/com/example/sweets/deleteGift.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/delete-gift-view.fxml");
     }
     @FXML
     protected void findBySugar(ActionEvent event) throws IOException {
         if (Table.getSelectionModel().getSelectedItem() == null) {
-            controller.showMessage("Select gift to edit");
+            controller.showMessage("Select a gift");
             return;
         }
         DB.gift = Table.getSelectionModel().getSelectedItem();
-        controller.goTo(event, "src/main/resources/com/example/sweets/FindBysugar.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/find-by-sugar-view.fxml");
     }
 
     @FXML
@@ -54,7 +65,7 @@ public class GiftController implements Initializable {
             return;
         }
         DB.gift = Table.getSelectionModel().getSelectedItem();
-        controller.goTo(event, "src/main/resources/com/example/sweets/editGift.fxml");
+        controller.goTo(event, "src/main/resources/com/example/sweets/edit-gift-view.fxml");
     }
 
     @Override
