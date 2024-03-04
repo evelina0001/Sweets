@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -41,6 +42,21 @@ public class GiftController implements Initializable {
     @FXML
     protected void addGift(ActionEvent event) throws IOException {
         controller.goTo(event, "src/main/resources/com/example/sweets/add-gift-view.fxml");
+    }
+    @FXML
+    protected void writeGift(ActionEvent event) throws IOException {
+        if (Table.getSelectionModel().getSelectedItem() == null) {
+            controller.showMessage("Select gift to find by name");
+            return;
+        }
+        DB.gift = Table.getSelectionModel().getSelectedItem();
+        DB.gift.writeSweet("sweets.txt");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Info");
+        alert.setHeaderText("data id written to file");
+
+        alert.show();
+
     }
     @FXML
     protected void deleteGift(ActionEvent event) throws IOException {

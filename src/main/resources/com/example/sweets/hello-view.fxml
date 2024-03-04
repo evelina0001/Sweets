@@ -37,7 +37,7 @@
             <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Barrete.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="250.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <ImageView fitHeight="171.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <image>
             <Image url="C:\data\prj\learning\Sweets\src\main\resources\com\example\sweets\images\Cake4.png" />
          </image>
