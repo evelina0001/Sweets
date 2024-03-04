@@ -1,6 +1,8 @@
 package com.example.sweets.models;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -69,6 +71,19 @@ public class Gift {
         }
         present.add(sweet);
         System.out.println(sweet);
+    }
+    public void writeSweet(String filename) throws IOException {
+        File file = new File(filename);
+        FileWriter fileWriter = new FileWriter(file);
+        fileWriter.write(box.name() + "\n");
+        fileWriter.write(color.name() + "\n");
+        fileWriter.write(present.size() + "\n");
+        for (Sweet s : present) {
+            fileWriter.write(s.info());
+        }
+
+        fileWriter.close();
+
     }
 
     @Override
